@@ -11,5 +11,13 @@ nav {
   border: 2px solid white;
   width: 250px;
   height: 100%;
-  display: none;
+  /* display: none; */
+}
+
+.content-box {
+  background-color: grey;
+}
+
+.content-before {
+  background-color: blue;
 }
