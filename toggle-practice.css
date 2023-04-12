@@ -1,0 +1,15 @@
+body {
+  background-color: black;
+  color: white
+}
+
+header img {
+  width: 10%;
+}
+
+nav {
+  border: 2px solid white;
+  width: 250px;
+  height: 100%;
+  display: none;
+}
