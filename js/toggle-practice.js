@@ -6,6 +6,17 @@ $(document).ready(function(){
   $(".info-title").click(function(){
     $(".info-content").slideToggle("slow")
   });
+
+  $(".content-box").click(function() {
+    $(".content-box").animate({
+      width: '500px',
+      height: '300px'
+      // add pixels to height of selected element
+      // height: '+=200px'
+
+    }, 1000);
+    $(".content-after").show().animate({opacity: "1"}, 3000);
+  });
 })
 
 //! effects covered 
@@ -16,6 +27,7 @@ $(document).ready(function(){
   // $("#side-nav").fadeTo(1000, 0.5, function(){
     // alert("hi there")
   // });
+
 // slideUp
 // slideDown
 // slideToggle("slow")
@@ -23,3 +35,5 @@ $(document).ready(function(){
 // slideToggle("fast", function(){
 // alert("hi there")
   // })
+
+// show, hide, fade, and slide are all subfunctions of animate

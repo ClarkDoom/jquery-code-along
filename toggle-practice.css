@@ -16,8 +16,24 @@ nav {
 
 .content-box {
   background-color: grey;
+  width: 240px;
+  height: 60px;
+  border-radius: 6px;
+  padding: 20px;
 }
 
 .content-before {
-  background-color: blue;
+  font-size: 22px;
+  font-family: arial;
+  text-align: center;
+  line-height: 60px;
+}
+
+.content-after {
+  display: none;
+  font-size: 14px;
+  font-family: arial;
+  text-align: left;
+  line-height: 16px;
+  opacity: 0;
 }
