@@ -1,4 +1,18 @@
 $(document).ready(function(){
+
+  $(".content-box2").click(function() {
+    $(".content-box2").animate({
+      width: '500px',
+      height: '400px'
+    }, 3000).animate({
+      fontSize: '30px'
+    }, 3000);
+  })
+
+  $("button").click(function() {
+    $(".content-box2").stop();
+  })
+
   $("#menu-toggle").click(function() {
     $("#side-nav").slideToggle(1000);
   });
@@ -16,6 +30,9 @@ $(document).ready(function(){
 
     }, 1000);
     $(".content-after").show().animate({opacity: "1"}, 3000);
+
+
+
   });
 })
 
@@ -37,3 +54,8 @@ $(document).ready(function(){
   // })
 
 // show, hide, fade, and slide are all subfunctions of animate
+
+// stop() // actually stop(false, false)
+  // stop(false, false) // stop first animation, chained animation will still run, can keep using stop button to stop sequential animations   
+// stop(true) //  stop all animations inside elemtn from happening
+// stop(true, true) // when the button is clicked animations are finished off and stopped
