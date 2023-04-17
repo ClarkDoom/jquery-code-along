@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <script>
+    $(document).ready(function () {
+
+      $("#btn1").click(function() {
+        $("#test1").text("This is the new text");
+      });
+      
+      $("#btn2").click(function() {
+        $("#test2").html("<i>New text baby</i>");
+      });
+
+      $("#btn3").click(function() {
+        $("#test3").val("New input data!");
+      });
+
+    });
+  </script>
+
+  <p id="test1">Lorem ipsum dolor sit amet.</p>
+  <p id="test2"><b>Aut ullam vel repellat, labore alias error distinctio odio.</b></p>
+  <input type="text" id="test3">
+
+  <button id="btn1">Text</button>
+  <button id="btn2">HTML</button>
+  <button id="btn3">Input</button>
+
+</body>
+
+</html>
