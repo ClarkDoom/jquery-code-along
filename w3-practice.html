@@ -6,17 +6,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="/w3-practice.css">
 </head>
 
 <body>
 
-  <div id="container">
+  <!-- <input type="text">
+  <input type="text"> -->
+  <button id="toggle">Toggle</button>
+  <button id="stop">stop</button>
+
+  <div id="container1">
     <p id="p-first">The first paragraph</p>
     <p id="p-second">The second paragraph</p>
     <p id="p-third">The third paragraph</p>
   </div>
 
-  <button>Click</button>
+  <div id="container2">
+    <p>Here is some content</p>
+  </div>
+
+  <div id="container3">
+    <p>Here is some more content</p>
+  </div>
+
+  <!-- <button id="hide">Hide</button>
+  <button id="show">Show</button> -->
 
 
 </body>
@@ -25,17 +40,177 @@
 
 <script>
 
-$(function(){
-  
-  $("button").click(function(){
-    $("#p-first").toggle();
-  });
+  $(function () {
 
-  $(document).dblclick(function() {
-    $("#p-second").toggle()
+    // on click run function
+    // $("button").click(function () {
+    //   $("#p-first").toggle();
+    // });
+
+    // on double click run function
+    // $(document).dblclick(function() {
+    //   $("#p-second").toggle()
+    // })
+
+    // when mouse enters element, run function
+    // $("#p-third").mouseenter(function() {
+    //   $("#p-third").toggle(2000)
+    // })
+
+    // on release of mouse click, run function
+    // $("#p-second").mouseup(function () {
+    //   alert("Bye! You now leave p1!");
+    // });
+
+    // on click, run function
+    // $("#p-second").mousedown(function () {
+    //   alert("Bye! You now leave p1!");
+    // });
+
+    // multiple functions can be chained via the below method
+    // $("#p-third").hover(function () {
+    //   alert("you're hovering over third p");
+    // },
+    //   function () {
+    //     alert("Bye! You now leave p3!");
+    //   }
+    // );
+
+    // change bgcolor when focus is on selected input
+    // $("input").focus(function () {
+    //   $(this).css("background-color", "yellow");
+    // });
+
+    // // change bgcolor when focus is removed from selected input
+    // $("input").blur(function () {
+    //   $(this).css("background-color", "green");
+    // });
+
+    // the on method can be used to chain event handlers 
+    // $("p").on({
+    //   mouseenter: function () {
+    //     $(this).css("background-color", "lightgray");
+    //   },
+    //   mouseleave: function () {
+    //     $(this).css("background-color", "lightblue");
+    //   },
+    //   click: function () {
+    //     $(this).css("background-color", "yellow");
+    //   }
+    // });
+
+    // syntax for hide/show 
+    // $(selector).hide(speed,callback);
+    // can accept "slow", "fast", or milliseconds i.e. (1000)
+
+    // $("#hide").click(function() {
+    //   $("p").hide(1000)
+    // })
+    // $("#show").click(function() {
+    //   $("p").show(1000)
+    // })
+
+    // toggle alternates between hide and show
+    // $("#toggle").click(function() {
+    //   $("p").toggle(1000)
+    // })
+
+    // set css for items to display: none and you can fade in items using the below methods (fadeOut works the same way)
+    // $("#toggle").click(function() {
+    //   $("#container1").fadeIn()
+    //   $("#container2").fadeIn("slow")
+    //   $("#container3").fadeIn(3000)
+    // })
+
+
+    // fadeIn and fadeOut combined
+    // $("#toggle").click(function() {
+    //   $("#container1").fadeToggle()
+    //   $("#container2").fadeToggle("slow")
+    //   $("#container3").fadeToggle(3000)
+    // })
+
+    // you can fade to a certain opacity with fadeTo
+    // $("#toggle").click(function() {
+    //   $("#container1").fadeTo("slow", 0.15)
+    //   $("#container2").fadeTo("slow", 0.4)
+    //   $("#container3").fadeTo("slow", 0.7)
+    // })
+
+    // you can slide elements up or down
+    // $("#toggle").click(function() {
+    //   $("div").slideUp(1000)
+    // })
+    // $("#toggle").click(function() {
+    //   $("div").slideDown(1000)
+    // })
+
+    // slideUp and slideDown can allso be toggled
+    // $("#toggle").click(function() {
+    //   $("div").slideToggle(1000)
+    // })
+
+    // jQuery animations 
+    // syntax $(selector).animate({params},speed,callback);
+    // To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!
+
+    // $("#toggle").click(function () {
+    //   $("#container1").animate({
+    //     left: '250px',
+    //     opacity: '0.5',
+    //     height: '150px',
+    //     width: '+250px',
+    //   }, 10000)
+    // })
+
+
+    // You can even specify a property's animation value as "show", "hide", or "toggle":
+    // $("#toggle").click(function () {
+    //   $("#container1").animate({
+    //     width: 'toggle',
+    //     height: 'toggle'
+    //   }, 1000)
+    // })
+
+    // animations can be queued for more complex animations
+    // $("#toggle").click(function () {
+    //   var div = $("div");
+    //   div.animate({ height: '300px', opacity: '0.4' }, "slow");
+    //   div.animate({ width: '300px', opacity: '0.8' }, "slow");
+    //   div.animate({ height: '100px', opacity: '0.4' }, "slow");
+    //   div.animate({ width: '100px', opacity: '0.8' }, "slow");
+    //   div.animate({ fontSize: '40px' }, "slow")
+    //   div.animate({ fontSize: '10px' }, "slow")
+    // })
+
+    // you can stop animations with the following syntax
+    // $(selector).stop(stopAll,goToEnd);
+    // parameters are true or false
+    // $("#stop").click(function () {
+    //   $("div").stop(true);
+    // });
+
+    // callback functions after effects
+
+    // alert is shown AFTER the hide method is complete
+    // $("#toggle").click(function () {
+    //   $("div").hide("slow", function () {
+    //     alert("The divs are now hidden");
+    //   });
+    // });
+
+    // alert is shown BEFORE the hide method is complete
+    // $("#toggle").click(function () {
+    //   $("div").hide(1000);
+    //   alert("The divs are now hidden");
+    // });
+
+    // chaining effects
+    // $("#container1").css("color", "white")
+    //   .slideUp(2000)
+    //   .slideDown(2000);
+
   })
-
-})
 
 </script>
 
