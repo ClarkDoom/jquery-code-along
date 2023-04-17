@@ -55,7 +55,7 @@
 
   <!-- <a href="https://www.google.com" id="googleLink">Link to google</a> -->
 
-  <button>Click</button>
+  <!-- <button>Click</button>
 
   <img src="https://d83vwgwvylun0.cloudfront.net/img/s/344-shar-pei.jpg" alt="">
 
@@ -63,7 +63,29 @@
     <h1 id="test">1</h1>
     <h2 class="test">2</h2>
     <p id="test">3</p>
+  </div> -->
+
+  <div class="ancestors">
+    <div style="width:500px;">div (great-grandparent)
+      <ul>ul (grandparent)
+        <li>li (direct parent)
+          <span>span</span>
+        </li>
+      </ul>
+      <p class="test">yeah boy</p>
+    </div>
+
+    <div style="width:500px;">div (grandparent)
+      <p class="test">p (direct parent)
+        <span>span</span>
+      </p>
+      <p>second p</p>
+      <p>third p</p>
+      <h2>test</h2>
+    </div>
   </div>
+
+  <button>click</button>
 
 
 </body>
@@ -434,9 +456,101 @@
     // });
 
     // set width and height
+    // $("button").click(function () {
+    //   $("#div1").width(400).height(500);
+    // });
+
+    // you can select the immediate parent of an object or multiple objects like so
+    // $("button").click(function () {
+    //   $("span").parent().css({"color": "red", "border": "2px solid red"});
+    // })
+
+    // you can select all the parent elements of an object like so
+    // $("button").click(function () {
+    //   $("span").parents().css({"color": "red", "border": "2px solid red"});
+    // })
+
+    // you can filter parent elements like so
+    // $("button").click(function () {
+    //   $("span").parents("ul").css({"color": "red", "border": "2px solid red"});
+    // })
+
+    // return ancestor elements between two given arguments
+    // $("button").click(function () {
+    //   $("span").parentsUntil("div").css({"color": "red", "border": "2px solid red"});
+    // })
+
+    // select all children elements, only goes one level down DOM
+    // $("button").click(function () {
+    //   $("div").children().css({"color": "red", "border": "2px solid red"});
+    // })
+
+    // select children and filter, only goes one level down DOM
+    // $("button").click(function () {
+    //   $("div").children("p.test").css({"color": "red", "border": "2px solid red"});
+    // })
+
+    // find() returns descendent elements of a selected element all the way down the DOM
+    // $("button").click(function () {
+    //   $("div").find("span").css({"color": "red", "border": "2px solid red"});
+    // })
+
+    // use * with find() to select all of an element type
+    // $("button").click(function () {
+    //   $("ul").find("*").css({"color": "red", "border": "2px solid red"});
+    // })
+
+    // select siblings of an element
+    // $("button").click(function () {
+    //   $("p").siblings().css({"color": "red", "border": "2px solid red"});
+    // })
+
+    // select siblings of an element that meet a filter criteria (select siblings that are p's)
+    // $("button").click(function () {
+    //   $("p").siblings("p").css({"color": "red", "border": "2px solid red"});
+    // })
+
+    // select the next element to a specific element
+    // $("button").click(function () {
+    //   $(".test").next().css({ "color": "red", "border": "2px solid red" });
+    // })
+
+    // select all of the next sibling elements 
+    // $("button").click(function () {
+    //   $(".test").nextAll().css({ "color": "red", "border": "2px solid red" });
+    // })
+
+    // find items between a search criteria
+    // $("button").click(function () {
+    //   $("p").nextUntil("h2").css({ "color": "red", "border": "2px solid red" });
+    // })
+
+    //The prev(), prevAll() and prevUntil() methods work just like the methods above but with reverse functionality: they return previous sibling elements (traverse backwards along sibling elements in the DOM tree, instead of forward).
+
+    // select first or last element of a type
+    // $("button").click(function () {
+    //   $("div").first().css({ "color": "red", "border": "2px solid red" });
+    // })
+    // $("button").click(function () {
+    //   $("div").last().css({ "color": "red", "border": "2px solid red" });
+    // })
+
+    // .eq() can be used to find an element at a certain index, i.e. p at index 0
+    // $("button").click(function () {
+    //   $("p").eq(0).css({ "color": "red", "border": "2px solid red" });
+    // })
+
+    // you can filter like so
+    // $("button").click(function () {
+    //   $("p").filter(".test").css({ "color": "red", "border": "2px solid red" });
+    // })
+
+    // you can find all the elements that dont meet a filter criteria as well
     $("button").click(function () {
-      $("#div1").width(400).height(500);
-    });
+      $("p").not(".test").css({ "color": "red", "border": "2px solid red" });
+    })
+
+
   })
 
 </script>

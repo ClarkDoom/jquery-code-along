@@ -23,13 +23,13 @@
 }
 
 div {
-  background:#98bf21;
+  /* background:#98bf21;
   height:200px;
   width:300px;
   position:relative;
   margin: 10px;
   padding: 10px;
-  border: 10px solid black;
+  border: 10px solid black; */
 }
 
 /* .important {
@@ -44,3 +44,11 @@ div {
 p {
   background-color: grey;
 } */
+
+.ancestors * { 
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
