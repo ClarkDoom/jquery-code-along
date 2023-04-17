@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="container">
+    <p id="p-first">The first paragraph</p>
+    <p id="p-second">The second paragraph</p>
+    <p id="p-third">The third paragraph</p>
+  </div>
+
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    var createEle = document.createElement("p")
+    createEle.innerHTML = "A new new paragraph";
+
+    $("#container").append("<p>A new paragraph</p>", "<p>A second new paragraph</p>", createEle)
+    // $("#container").prepend("A new paragraph")
+    // $("#container").before("A new paragraph")
+    // $("#container").after("A new paragraph")
+
+
+  })
+</script>
+
+</html>
