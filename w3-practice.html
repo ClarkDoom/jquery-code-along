@@ -13,10 +13,17 @@
 
   <!-- <input type="text">
   <input type="text"> -->
-  <button id="toggle">Toggle</button>
-  <button id="stop">stop</button>
+  <!-- <button id="toggle">Toggle</button> -->
+  <!-- <button id="stop">stop</button> -->
 
-  <div id="container1">
+  <!-- <p id="test">
+    <b>This is a test element</b>
+  </p>
+
+  <input type="text" id="testInput">
+  <a href="https://www.google.com" id="googleLink">Link to google</a> -->
+
+  <!-- <div id="container1">
     <p id="p-first">The first paragraph</p>
     <p id="p-second">The second paragraph</p>
     <p id="p-third">The third paragraph</p>
@@ -28,10 +35,35 @@
 
   <div id="container3">
     <p>Here is some more content</p>
-  </div>
+  </div> -->
 
   <!-- <button id="hide">Hide</button>
   <button id="show">Show</button> -->
+
+  <!-- <button id="btn1">Button 1</button>
+  <button id="btn2">Button 2</button>
+  <button id="btn3">Button 3</button> -->
+
+  <!-- <div>
+    <p id="test1">Old Text 1</p>
+    <p id="test2">Old Text 2</p>
+  </div> -->
+
+  <!-- <div id="test1">Test old</div>
+  <div id="test2">Test old 2</div> -->
+  <!-- <input type="text" id="test3"> -->
+
+  <!-- <a href="https://www.google.com" id="googleLink">Link to google</a> -->
+
+  <button>Click</button>
+
+  <img src="https://d83vwgwvylun0.cloudfront.net/img/s/344-shar-pei.jpg" alt="">
+
+  <div id="div1">
+    <h1 id="test">1</h1>
+    <h2 class="test">2</h2>
+    <p id="test">3</p>
+  </div>
 
 
 </body>
@@ -210,6 +242,201 @@
     //   .slideUp(2000)
     //   .slideDown(2000);
 
+    // DOM manipulation
+
+    // text() - Sets or returns the text content of selected elements
+    // html() - Sets or returns the content of selected elements(including HTML markup)
+    // val() - Sets or returns the value of form fields
+
+    // get text from element
+    // $("#toggle").click(function() {
+    //   alert("Text: " + $("#test").text())
+    // })
+
+    // get html from element
+    // $("#toggle").click(function() {
+    //   alert("HTML: " + $("#test").html())
+    // })
+
+    // get value from input
+    // $("#toggle").click(function () {
+    //   alert("Value: " + $("#testInput").val());
+    // });
+
+    // get attribute values
+    // $("#toggle").click(function () {
+    //   alert($("#googleLink").attr("href"));
+    // });
+
+    // similar to getting attributes, you can set text, html, and val by providing values as parameters
+    // $("#btn1").click(function () {
+    //   $("#test1").text("Hello world!");
+    // });
+    // $("#btn2").click(function () {
+    //   $("#test2").html("<b>Hello world!</b>");
+    // });
+    // $("#btn3").click(function () {
+    //   $("#test3").val("Dolly Duck");
+    // });
+
+    // The callback function has two parameters: the index of the current element in the list of elements selected and the original (old) value. You then return the string you wish to use as the new value from the function.
+
+    // $("#btn1").click(function () {
+    //   $("#test1").text(function (i, origText) {
+    //     return "Old text: " + origText + " New text: Hello world! (index: " + i + ")";
+    //   });
+    // });
+
+    // $("#btn2").click(function () {
+    //   $("#test2").html(function (i, origText) {
+    //     return "Old html: " + origText + " New html: Hello <b>world!</b> (index: " + i + ")";
+    //   });
+    // });
+
+    // set attributes
+    // $("button").click(function () {
+    //   $("#googleLink").attr("href", "https://www.w3schools.com/jquery/");
+    // });
+
+    // $("button").click(function () {
+    //   $("#googleLink").attr({
+    //     "href": "https://www.w3schools.com/jquery/",
+    //     "title": "W3Schools jQuery Tutorial"
+    //   });
+    // });
+
+    // callback function can be provided with index and original value
+    // $("button").click(function () {
+    //   $("#googleLink").attr("href", function (i, origValue) {
+    //     return origValue + "/jquery/";
+    //   });
+    // });
+
+    // append, prepend, before, and after 
+
+    // $("button").click(function() {
+    //   $("p").append("appended text")
+    // })
+
+    // $("button").click(function() {
+    //   $("p").prepend("prepended text")
+    // })
+
+    // you can use text/html, jquery, js + dom
+    // $("button").click(function appendText() {
+    //   var txt1 = "<p>Text.</p>";               // Create element with HTML 
+    //   var txt2 = $("<p></p>").text("Text.");   // Create with jQuery
+    //   var txt3 = document.createElement("p");  // Create with DOM
+    //   txt3.innerHTML = "Text.";
+    //   $("body").append(txt1, txt2, txt3);      // Append the new elements
+    // })
+
+
+    // $("button").click(function() {
+    //   $("img").after("text added after")
+    // })
+
+    // $("button").click(function() {
+    //   $("img").before("<p>text added before</p>")
+    // })
+
+    // you can remove items with the remove() method
+    // $("button").click(function() {
+    //   $("img").remove()
+    // })
+
+    // you can also remove child elements 
+    // $("button").click(function() {
+    //   $("div").empty()
+    // })
+
+    // you can also target items to be removed by class or id
+    // $("button").click(function() {
+    //   $("p").remove("#test")
+    // })
+
+    // you can also target multiple elements at once
+    // $("button").click(function() {
+    //   $("p").remove("#test, .test")
+    // })
+
+    // manipulate CSS by adding classes
+    // $("button").click(function () {
+    //   $("h1, h2, p").addClass("blue");
+    //   $("div").addClass("important");
+    // });
+
+    // you can also add multiple classes at once
+    // $("button").click(function () {
+    //   $("div").addClass("important blue");
+    // });
+
+    // you can remove classes as well
+    // $("button").click(function () {
+    //   $("div").removeClass("blue");
+    // });
+
+    // you can toggle classes like so
+    // $("button").click(function () {
+    //   $("h1, h2, p").toggleClass("blue");
+    // });
+
+    // you can have a css property value be returned like so
+    // $("button").click(function () {
+    //   alert($("p").css("background-color"));
+    // });
+
+    // to change the css property value, do this
+    // $("button").click(function () {
+    //   $("p").css("background-color", "yellow");
+    // });
+
+    // to change multiple css properties, use this syntax
+    // $("button").click(function () {
+    //   $("p").css({"background-color": "yellow", "font-size": "40px"});
+    // });
+
+    // width and height can read or set width or height (excluding padding, border, and margin)
+    // $("button").click(function () {
+    //   var txt = "";
+    //   txt += "Width: " + $("#div1").width() + "</br>";
+    //   txt += "Height: " + $("#div1").height();
+    //   $("#div1").html(txt);
+    // });
+
+    // innerWidth and innerHeight include padding
+    // $("button").click(function () {
+    //   var txt = "";
+    //   txt += "Inner width: " + $("#div1").innerWidth() + "</br>";
+    //   txt += "Inner height: " + $("#div1").innerHeight();
+    //   $("#div1").html(txt);
+    // });
+
+    // outerWidth includes padding, border
+    // outerWidth(true) includes padding, border, and margin
+    // $("button").click(function () {
+    //   var txt = "";
+    //   txt += "Outer width (+margin): " + $("#div1").outerWidth(true) + "</br>";
+    //   txt += "Outer height (+margin): " + $("#div1").outerHeight(true);
+    //   $("#div1").html(txt);
+    // });
+
+
+
+    // you can retreive the width and hieght of the document and window with the following syntax
+    // $("button").click(function () {
+    //   var txt = "";
+    //   txt += "Document width/height: " + $(document).width();
+    //   txt += "x" + $(document).height() + "\n";
+    //   txt += "Window width/height: " + $(window).width();
+    //   txt += "x" + $(window).height();
+    //   alert(txt);
+    // });
+
+    // set width and height
+    $("button").click(function () {
+      $("#div1").width(400).height(500);
+    });
   })
 
 </script>
