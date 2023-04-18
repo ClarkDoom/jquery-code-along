@@ -65,7 +65,7 @@
     <p id="test">3</p>
   </div> -->
 
-  <div class="ancestors">
+  <!-- <div class="ancestors">
     <div style="width:500px;">div (great-grandparent)
       <ul>ul (grandparent)
         <li>li (direct parent)
@@ -85,8 +85,10 @@
     </div>
   </div>
 
-  <button>click</button>
+  <button>click</button> -->
 
+  <div id="div1">test div</div>
+  <button>click</button>
 
 </body>
 
@@ -546,10 +548,15 @@
     // })
 
     // you can find all the elements that dont meet a filter criteria as well
-    $("button").click(function () {
-      $("p").not(".test").css({ "color": "red", "border": "2px solid red" });
-    })
+    // $("button").click(function () {
+    //   $("p").not(".test").css({ "color": "red", "border": "2px solid red" });
+    // })
 
+    // you can use AJAX to load external content
+    // below example loads test file and shows the #p1 element
+    $("button").click(function () {
+      $("#div1").load("demo_test.txt #p1");
+    })
 
   })
 
